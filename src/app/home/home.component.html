@@ -1,0 +1,35 @@
+<div class="main-container">
+  <div class="header">
+    <img src="assets/images/logo.png" alt="Imagen de Boda" class="main-image" />
+  </div>
+
+  <div class="buttons-container">
+    <button class="main-button" (click)="openFileSelector()">Subir Fotos</button>
+    <button class="main-button" (click)="viewGallery()">Ver Galería</button>
+  </div>
+
+  <!-- Selector de archivos, solo visible cuando se hace clic en 'Subir Fotos' -->
+  <input #fileInput type="file" accept="image/*" (change)="onFileSelected($event)" multiple [hidden]="true" />
+
+  <!-- Pop-up para confirmar la subida de fotos -->
+  <div *ngIf="isDialogOpen" class="upload-dialog">
+    <div class="dialog-content">
+      <h1>¿Estás listo para subir {{ selectedFiles.length }} foto{{ selectedFiles.length !== 1 ? 's' : '' }} inolvidables?</h1>
+      <button class="secondary-button accept-button" (click)="uploadPhotos()">Aceptar</button>
+      <button class="secondary-button close-button"(click)="closeDialog()">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Información sobre la subida de fotos -->
+  <div *ngIf="isUploading" class="uploading-message">
+    <p>Subiendo fotos...</p>
+  </div>
+
+  <div *ngIf="uploadSuccess" class="success-message">
+    <p>¡Fotos subidas con éxito!</p>
+  </div>
+
+  <div *ngIf="uploadError" class="error-message">
+    <p>Hubo un error al subir las fotos.</p>
+  </div>
+</div>

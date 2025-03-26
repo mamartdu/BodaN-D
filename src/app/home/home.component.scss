@@ -1,0 +1,129 @@
+/* Estilos generales */
+:host {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Usa el 100% de la altura de la ventana del navegador */
+    margin: 0; /* Elimina márgenes */
+    background-color: #f4f4f4; /* Fondo suave */
+  }
+  
+  .main-container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Limitar el ancho máximo */
+    padding: 20px;
+
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .main-button {
+    background-color: #d4af37; /* Color dorado */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px;
+    font-family: 'Galada', sans-serif;
+  }
+
+ .secondary-button{
+    font-family: 'Galada', sans-serif;
+  }
+  
+  .main-button:hover {
+    background-color: #b88c2f; /* Dorado oscuro al hacer hover */
+    transform: scale(1.05);
+  }
+  
+  .upload-dialog {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dialog-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .accept-button, .close-button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 10px;
+    width: 150px;
+  }
+  
+  .accept-button:hover, .close-button:hover {
+    background-color: #b88c2f;
+    transform: scale(1.05);
+  }
+  
+  .uploading-message, .success-message, .error-message {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .uploading-message {
+    color: #ffa500; /* Naranja */
+  }
+  
+  .success-message {
+    color: #28a745; /* Verde */
+  }
+  
+  .error-message {
+    color: #dc3545; /* Rojo */
+  }
+
+  .success-message {
+    animation: fadeOut 5s forwards; /* La animación durará 3 segundos y desaparecerá al final */
+  
+    @keyframes fadeOut {
+      0% {
+        opacity: 1; /* Comienza completamente visible */
+      }
+      100% {
+        opacity: 0; /* Al final, será completamente invisible */
+      }
+    }
+  }
+
+
+
+  
+  
